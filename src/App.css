@@ -1,38 +1,72 @@
-.App {
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(31, 31, 31);
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.heading {
+  position: relative;
+  align-self: center;
+  justify-self: center;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  line-height: normal;
+  width: fit-content;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.font-link {
+  font-family: 'Montserrat';
   color: white;
+  font-weight: 300;
+  font-size: 48px;
 }
 
-.App-link {
-  color: #61dafb;
+.font-link span {
+  font-family: 'Montserrat';
+  color: rgb(0, 225, 255);
+  font-weight: 500;
 }
 
-@keyframes App-logo-spin {
+.font-link p {
+  margin: 0;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+ }
+
+.drop-in {
+  animation: drop-in 1s ease 250ms backwards;
+ }
+ 
+ .drop-in-2 {
+  animation: drop-in 1200ms ease 800ms backwards;
+ }
+ 
+ @keyframes drop-in {
   from {
-    transform: rotate(0deg);
+   opacity: 0;
+   transform: translateY(-100px);
   }
   to {
-    transform: rotate(360deg);
+   opacity: 1;
+   transform: translate(0px);
   }
-}
+ }
+ 
