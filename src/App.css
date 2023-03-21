@@ -5,8 +5,10 @@ html {
 }
 
 body {
-  background-color: rgb(31, 31, 31);
+	background-image: linear-gradient(to bottom right,#002f4b, #c73b1f);
 }
+
+/* Header */
 
 .hero {
   position: relative;
@@ -39,8 +41,8 @@ body {
 
 .font-link span {
   font-family: 'Montserrat';
-  color: rgb(0, 117, 250);
-  font-weight: 500;
+  color: #002f4b;
+  font-weight: 600;
 }
 
 .font-link p {
@@ -74,11 +76,11 @@ body {
   position: relative;
   font-size: 19.2px;
   font-family: 'Montserrat';
-  color: rgb(0, 117, 250);
+  color: #002f4b;
   opacity: 100%;
   border-radius: 10px;
-  border: 2px solid rgb(0, 117, 250);
-  font-weight: 500;
+  border: 3px solid #002f4b;
+  font-weight: 600;
   margin-top: 1rem;
   padding: 0.2rem 1rem;
   width: 10rem;
@@ -106,4 +108,85 @@ body {
   color: inherit;
   text-decoration: none;
  }
+
+ @media (max-width: 700px) {
+  .hero {
+    height: 100vh;
+  }
+
+  .heading {
+    width: 80%;
+  }
+
+  .font-link {
+    font-size: 32px;
+  }
+
+  .mehrButton {
+    font-size: 16px;
+    margin-top: 0.5rem;
+    padding: 0.2rem 0.5rem;
+    width: 8rem;
+  }
+}
+
+ /* Navbar */
+
+ .navigation-bar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  border-bottom: 1px solid #1a1a1a;
+  backdrop-filter: blur(8px);
+  background: linear-gradient(to bottom, transparent, rgba(40, 40, 40, 0.712));
+  box-shadow: 0 4px 4px rgba(0,0,0,0.3);
+}
+
+.navigationList {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+  margin: 0 5.5rem 0 3rem;
+  padding: 0;
+  text-align: center;
+}
+
+.navigation {
+  list-style: none;
+  margin: 0 1rem;
+  letter-spacing: 1px;
+  font-size: 20px;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  color: white;
+}
+
+.navigation--active a {
+  color: #ff4d5a;
+}
+
+@media (max-width: 700px) {
+  .navigationList {
+    justify-content: center;
+    margin: 0rem;
+  }
+
+  .navigation {
+    margin: 0.5rem;
+    padding: 0 10px;
+    font-size: 15px;
+  }
+
+  .navigation-bar {
+    height: 3rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
