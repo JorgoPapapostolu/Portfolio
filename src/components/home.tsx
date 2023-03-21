@@ -8,7 +8,7 @@ export default function Home() {
           </p>
           <p className="drop-in-2">I'm a junior software developer.</p>
         </div>
-        <div></div>
+        <a href="#about" className="aboutLink"><div className="mehrButton">Mehr erfahren</div></a>
       </div>
     </div>
   );
