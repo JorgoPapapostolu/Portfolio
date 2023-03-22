@@ -5,8 +5,23 @@ html {
 }
 
 body {
-	background-image: linear-gradient(to bottom right,#002f4b, #c73b1f);
+  background-image: linear-gradient(to bottom right, #002f4b, #c73b1f);
 }
+
+/* Scrollbalken */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 5px;
+}
+
 
 /* Header */
 
@@ -33,14 +48,14 @@ body {
 }
 
 .font-link {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   color: white;
   font-weight: 300;
   font-size: 48px;
 }
 
 .font-link span {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   color: #002f4b;
   font-weight: 600;
 }
@@ -51,31 +66,31 @@ body {
 
 .overflow-hidden {
   overflow: hidden;
- }
+}
 
 .drop-in {
   animation: drop-in 1s ease 250ms backwards;
- }
- 
- .drop-in-2 {
+}
+
+.drop-in-2 {
   animation: drop-in 1200ms ease 800ms backwards;
- }
- 
- @keyframes drop-in {
+}
+
+@keyframes drop-in {
   from {
-   opacity: 0;
-   transform: translateY(-100px);
+    opacity: 0;
+    transform: translateY(-100px);
   }
   to {
-   opacity: 1;
-   transform: translate(0px);
+    opacity: 1;
+    transform: translate(0px);
   }
- }
+}
 
- .mehrButton {
+.mehrButton {
   position: relative;
   font-size: 19.2px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   color: #002f4b;
   opacity: 100%;
   border-radius: 10px;
@@ -86,30 +101,35 @@ body {
   width: 10rem;
   animation: mehrButton 1200ms ease 1500ms backwards;
   transition: all 0.5s;
- }
+  overflow: hidden;
+}
 
- .mehrButton:hover {
+.mehrButton:hover {
   top: -2.5px;
   bottom: 2.5px;
- }
+}
 
- @keyframes mehrButton {
+@keyframes mehrButton {
   from {
-   opacity: 0;
-   transform: translateY(100px);
+    opacity: 0;
+    transform: translateY(100px);
   }
   to {
-   opacity: 1;
-   transform: translate(0px);
+    opacity: 1;
+    transform: translate(0px);
   }
- }
+}
 
- .aboutLink {
+.aboutLink {
   color: inherit;
   text-decoration: none;
- }
+}
 
- @media (max-width: 700px) {
+@media (max-width: 700px) {
+  * {
+    overflow-x: hidden;
+}
+
   .hero {
     height: 100vh;
   }
@@ -130,9 +150,9 @@ body {
   }
 }
 
- /* Navbar */
+/* Navbar */
 
- .navigation-bar {
+.navigation-bar {
   position: sticky;
   top: 0;
   display: flex;
@@ -141,7 +161,7 @@ body {
   border-bottom: 1px solid #1a1a1a;
   backdrop-filter: blur(8px);
   background: linear-gradient(to bottom, transparent, rgba(40, 40, 40, 0.6));
-  box-shadow: 0 4px 4px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 .navigationList {
@@ -159,7 +179,7 @@ body {
   margin: 0 1rem;
   letter-spacing: 1px;
   font-size: 20px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 600;
   color: white;
 }
@@ -189,4 +209,3 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
