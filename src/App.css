@@ -6,15 +6,18 @@ html {
 
 body {
   background-image: linear-gradient(to bottom right, #002f4b, #c73b1f);
+  overflow: overlay;
 }
 
 /* Scrollbalken */
 ::-webkit-scrollbar {
   width: 10px;
+  background-color: transparent;
+  border: none;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: white;
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
