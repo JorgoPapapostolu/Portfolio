@@ -2,12 +2,11 @@ html {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
   background-image: linear-gradient(to bottom right, #002f4b, #c73b1f);
-  overflow: hidden;
+  overflow: overlay;
 }
 
 /* Scrollbalken */
