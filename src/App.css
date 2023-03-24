@@ -248,3 +248,57 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* About */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+ .about {
+    width: auto;
+}
+}
+
+.about-heading {
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+  position: relative;
+  font-size: 4rem;
+  font-weight: 900;
+  color: white;
+  font-family: "Montserrat";
+  border-bottom: 1px solid white;
+}
+
+@media (max-width: 700px) {
+  .about-heading {
+     font-size: 2.5rem;
+     font-weight: 900;
+     margin-top: 3rem;
+     margin-bottom: 2rem;
+ }
+ }
+
+.profile-description {
+  font-size: 1.1rem;
+  width: 500px;
+  line-height: 1.8;
+  color: white;
+  font-family: "Montserrat";
+}
+
+@media (max-width: 700px) {
+  .profile-description {
+    font-size: 0.8rem;
+    width: 80vw;
+    line-height: 1.8;
+    margin-left: auto;
+    margin-right: auto;
+ }
+ }
