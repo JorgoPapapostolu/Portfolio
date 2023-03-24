@@ -2,11 +2,12 @@ html {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   background-image: linear-gradient(to bottom right, #002f4b, #c73b1f);
-  overflow: overlay;
+  overflow: hidden;
 }
 
 /* Scrollbalken */
@@ -75,10 +76,6 @@ body {
   animation: drop-in 1s ease 250ms backwards;
 }
 
-.drop-in-2 {
-  animation: drop-in 1200ms ease 800ms backwards;
-}
-
 @keyframes drop-in {
   from {
     opacity: 0;
@@ -87,6 +84,24 @@ body {
   to {
     opacity: 1;
     transform: translate(0px);
+  }
+}
+
+.drop-in-2 {
+  margin-top: 1rem;
+  width: 900px;
+  height: 250px;
+}
+
+.delayed {
+  opacity: 0;
+  animation: fadeIn 0s ease-out forwards;
+  animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
 }
 
@@ -129,7 +144,7 @@ body {
 }
 
 @media (max-width: 700px) {
-  * {
+  html {
     overflow-x: hidden;
 }
 
@@ -150,10 +165,23 @@ body {
     margin-top: 0.5rem;
     padding: 0.2rem 0.5rem;
     width: 8rem;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  .drop-in-2 {
+    width: 300px;
+    height: 100px;
   }
 }
 
 /* Navbar */
+
+.navigationLogo {
+  width: 250px;
+  height: 100px;
+  justify-content: flex-start;
+}
 
 .navigation-bar {
   position: sticky;
@@ -165,6 +193,7 @@ body {
   backdrop-filter: blur(8px);
   background: linear-gradient(to bottom, transparent, rgba(40, 40, 40, 0.6));
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  overflow-y: hidden;
 }
 
 .navigationList {
@@ -192,6 +221,12 @@ body {
 }
 
 @media (max-width: 700px) {
+  .navigationLogo {
+    width: 100px;
+    height: 60px;
+    overflow: hidden;
+  }
+
   .navigationList {
     justify-content: center;
     margin: 0rem;
@@ -199,8 +234,8 @@ body {
 
   .navigation {
     margin: 0.5rem;
-    padding: 0 10px;
-    font-size: 15px;
+    padding: 0 6px;
+    font-size: 13px;
   }
 
   .navigation-bar {
