@@ -177,9 +177,10 @@ body {
 /* Navbar */
 
 .navigationLogo {
-  width: 250px;
-  height: 100px;
+  width: 120px;
+  height: 70px;
   justify-content: flex-start;
+  margin-left: 5.5rem;
 }
 
 .navigation-bar {
@@ -192,7 +193,7 @@ body {
   backdrop-filter: blur(8px);
   background: linear-gradient(to bottom, transparent, rgba(40, 40, 40, 0.6));
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .navigationList {
@@ -221,9 +222,10 @@ body {
 
 @media (max-width: 700px) {
   .navigationLogo {
-    width: 100px;
-    height: 60px;
+    width: 80px;
+    height: 40px;
     overflow: hidden;
+    margin: 0;
   }
 
   .navigationList {
