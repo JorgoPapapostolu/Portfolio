@@ -1,3 +1,4 @@
+
 html {
   margin: 0;
   padding: 0;
@@ -184,7 +185,7 @@ body {
 }
 
 .navigation-bar {
-  position: sticky;
+  position: sticky !important;
   top: 0;
   display: flex;
   align-items: center;
@@ -230,7 +231,7 @@ body {
 
   .navigationList {
     justify-content: center;
-    margin: 0rem;
+    margin: 0;
   }
 
   .navigation {
@@ -257,6 +258,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   align-items: center;
+  background-color: #1a1a1a;
 }
 
 @media (max-width: 700px) {
@@ -264,6 +266,20 @@ a {
     width: auto;
 }
 }
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5rem;
+}
+
+@media (max-width: 700px) {
+  .profile {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+ }
+ }
 
 .about-heading {
   margin-top: 5rem;
@@ -281,24 +297,110 @@ a {
      font-size: 2.5rem;
      font-weight: 900;
      margin-top: 3rem;
-     margin-bottom: 1rem;
+     margin-bottom: 3rem;
  }
  }
 
 .profile-description {
   font-size: 1.1rem;
   width: 500px;
-  line-height: 1.8;
+  line-height: 2;
   color: white;
   font-family: "Montserrat";
+  margin-top: 0;
+  font-weight: 600;
 }
 
 @media (max-width: 700px) {
   .profile-description {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     width: 80vw;
     line-height: 1.8;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 2rem;
+ }
+ }
+
+ .portrait {
+  height: 400px;
+  width: 600px;
+ }
+
+ @media (max-width: 700px) {
+  .portrait {
+    height: 260px;
+    width: 390px;
+   }
+ }
+
+ .skills-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+ }
+
+ .skillitem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: double 3px transparent;
+  border-image-slice: 1;
+  background-image: linear-gradient(#1a1a1a, #1a1a1a),radial-gradient(circle at top left, #ff0000, #2bff00);
+  border-radius: 10px;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  overflow: hidden;
+  margin-right: 25px;
+  margin-bottom: 3rem;
+  border-width: 3px;
+  height: 100px;
+  width: 160px;
+  overflow: hidden;
+ }
+
+ .skillitem img {
+  height: 60px;
+  width: auto;
+  transition: 0.2;
+ }
+
+ .skill-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1;
+  transition: all 0.2s;
+  letter-spacing: 1px;
+  color: white;
+ }
+
+ @media (max-width: 700px) {
+  .skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 1.4rem;
+  }
+
+  .skills-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   }
+  
+  .skillitem {
+    height: 50px;
+    width: 90px;
+    margin-bottom: 1rem;
+   }
+
+   .skill-name {
+    font-size: 0.7rem;
+ }
+
+ .skillitem img {
+  height: 26px;
  }
  }
