@@ -9,6 +9,7 @@ import node from '../img/techstack/node.png';
 import postgresql from '../img/techstack/postgresql.png';
 import react from '../img/techstack/react.png';
 import sql from '../img/techstack/sql.png';
+import typescript from '../img/techstack/typescript.png';
 
 export default function About() {
   return (
@@ -50,6 +51,10 @@ export default function About() {
               <div className='skillitem'>
                 <img src={javascript} alt="javascript" />
                 <div className='skill-name'>JAVASCRIPT</div>
+              </div>
+              <div className='skillitem'>
+                <img src={typescript} alt="typescript" />
+                <div className='skill-name'>TYPESCRIPT</div>
               </div>
               <div className='skillitem'>
                 <img src={react} alt="react" />
