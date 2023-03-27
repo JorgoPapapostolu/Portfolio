@@ -1,13 +1,13 @@
-
 html {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  background-color: transparent;
 }
 
 body {
+  background-color: transparent;
   background-image: linear-gradient(to bottom right, #002f4b, #c73b1f);
-  overflow: overlay;
 }
 
 /* Scrollbalken */
@@ -25,7 +25,6 @@ body {
   background-color: #555;
   border-radius: 5px;
 }
-
 
 /* Header */
 
@@ -60,8 +59,30 @@ body {
 
 .font-link span {
   font-family: "Montserrat";
-  color: #002f4b;
-  font-weight: 600;
+  color: #5ff45b;
+  font-weight: 500;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.font-link span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff6b6b;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+
+.font-link span:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .font-link p {
@@ -109,22 +130,24 @@ body {
   position: relative;
   font-size: 19.2px;
   font-family: "Montserrat";
-  color: #002f4b;
-  opacity: 100%;
-  border-radius: 10px;
-  border: 3px solid #002f4b;
+  color: #fff;
+  background-color: #000;
+  border-radius: 20px;
+  border: 3px solid #fff;
   font-weight: 600;
   margin-top: 1rem;
-  padding: 0.2rem 1rem;
+  padding: 0.5rem 1rem;
   width: 10rem;
-  animation: mehrButton 1200ms ease 1500ms backwards;
   transition: all 0.5s;
   overflow: hidden;
+  animation: mehrButton 1200ms ease 1500ms backwards;
 }
 
 .mehrButton:hover {
-  top: -2.5px;
-  bottom: 2.5px;
+  background-color: #fff;
+  color: #000;
+  border: 3px solid #000;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes mehrButton {
@@ -146,7 +169,7 @@ body {
 @media (max-width: 700px) {
   html {
     overflow-x: hidden;
-}
+  }
 
   .hero {
     height: 100vh;
@@ -185,7 +208,7 @@ body {
 }
 
 .navigation-bar {
-  position: sticky !important;
+  position: sticky;
   top: 0;
   display: flex;
   align-items: center;
@@ -194,7 +217,7 @@ body {
   backdrop-filter: blur(8px);
   background: linear-gradient(to bottom, transparent, rgba(40, 40, 40, 0.6));
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
+  z-index: 1000;
 }
 
 .navigationList {
@@ -241,6 +264,9 @@ body {
   }
 
   .navigation-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     height: 3rem;
   }
 }
@@ -262,15 +288,17 @@ a {
 }
 
 @media (max-width: 700px) {
- .about {
+  .about {
     width: auto;
-}
+  }
 }
 
 .profile {
   display: flex;
   flex-direction: row;
-  margin-bottom: 5rem;
+  margin-bottom: 6.5rem;
+  margin-top: 5rem;
+  animation: profile 1.5s ease 250ms backwards;
 }
 
 @media (max-width: 700px) {
@@ -278,8 +306,20 @@ a {
     display: flex;
     flex-direction: column;
     margin-bottom: 1.5rem;
- }
- }
+    margin-top: 0rem;
+  }
+}
+
+@keyframes profile {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
 
 .about-heading {
   margin-top: 5rem;
@@ -290,16 +330,17 @@ a {
   color: white;
   font-family: "Montserrat";
   border-bottom: 1px solid white;
+  animation: profile 1.5s ease 250ms backwards;
 }
 
 @media (max-width: 700px) {
   .about-heading {
-     font-size: 2.5rem;
-     font-weight: 900;
-     margin-top: 3rem;
-     margin-bottom: 3rem;
- }
- }
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
 
 .profile-description {
   font-size: 1.1rem;
@@ -319,28 +360,29 @@ a {
     margin-left: auto;
     margin-right: auto;
     margin-top: 2rem;
- }
- }
+    opacity: 1;
+  }
+}
 
- .portrait {
+.portrait {
   height: 400px;
   width: 600px;
- }
+}
 
- @media (max-width: 700px) {
+@media (max-width: 700px) {
   .portrait {
     height: 260px;
     width: 390px;
-   }
- }
+  }
+}
 
- .skills-row {
+.skills-row {
   display: flex;
   flex-direction: row;
   justify-content: center;
- }
+}
 
- .skillitem {
+.skillitem {
   position: relative;
   display: flex;
   align-items: center;
@@ -348,7 +390,8 @@ a {
   justify-content: space-evenly;
   border: double 3px transparent;
   border-image-slice: 1;
-  background-image: linear-gradient(#1a1a1a, #1a1a1a),radial-gradient(circle at top left, #ff0000, #2bff00);
+  background-image: linear-gradient(#1a1a1a, #1a1a1a),
+    radial-gradient(circle at top left, #ff0000, #2bff00);
   border-radius: 10px;
   background-origin: border-box;
   background-clip: content-box, border-box;
@@ -359,24 +402,84 @@ a {
   height: 100px;
   width: 160px;
   overflow: hidden;
- }
+}
 
- .skillitem img {
+.skillitem img {
   height: 60px;
   width: auto;
   transition: 0.2;
- }
+}
 
- .skill-name {
+.skill-name {
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 1;
   transition: all 0.2s;
   letter-spacing: 1px;
   color: white;
- }
+}
 
- @media (max-width: 700px) {
+.delayedFour {
+  opacity: 0;
+  animation: none;
+}
+
+.fade-inFour {
+  opacity: 0;
+  animation: fade-inFour 3.3s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes fade-inFour {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.delayedFive {
+  opacity: 0;
+  animation: none;
+}
+
+.fade-inFive {
+  opacity: 0;
+  animation: fade-inFive 3.3s ease-out forwards;
+  animation-delay: 3s;
+}
+
+@keyframes fade-inFive {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.delayedSix {
+  opacity: 0;
+  animation: none;
+}
+
+.fade-inSix {
+  opacity: 0;
+  animation: fade-inSix 3.3s ease-out forwards;
+  animation-delay: 4.5s;
+}
+
+@keyframes fade-inSix {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 700px) {
   .skills {
     display: flex;
     flex-direction: row;
@@ -388,19 +491,164 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-   }
-  
+  }
+
   .skillitem {
     height: 50px;
     width: 90px;
     margin-bottom: 1rem;
-   }
+  }
 
-   .skill-name {
+  .skill-name {
     font-size: 0.7rem;
- }
+  }
 
- .skillitem img {
-  height: 26px;
- }
- }
+  .skillitem img {
+    height: 26px;
+  }
+}
+
+/* Contact */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  background-color: #1a1a1a;
+}
+
+@media (max-width: 700px) {
+  .contact {
+    width: auto;
+  }
+}
+
+.contact-heading {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  font-size: 4rem;
+  font-weight: 900;
+  color: white;
+  font-family: "Montserrat";
+  border-bottom: 1px solid white;
+  animation: contact-slide 2s ease 250ms forwards;
+}
+
+@keyframes contact-slide {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-heading {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.questionContact {
+  color: #9756ff;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  font-size: 19px;
+  animation: contact-slide2 2s ease-out;
+  animation-delay: 1.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes contact-slide2 {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 700px) {
+  .questionContact {
+    font-size: 16px;
+  }
+}
+
+.contact input[type="text"] {
+  background: #1e242c;
+  border: 0;
+  box-sizing: border-box;
+  color: #fff;
+  display: block;
+  font-size: 12pt;
+  margin-bottom: 3px;
+  outline: none;
+  padding: 10px 15px;
+  width: 30rem;
+}
+
+.contact textarea {
+  background: #1e242c;
+  border: 0;
+  box-sizing: border-box;
+  color: #fff;
+  display: block;
+  font-size: 12pt;
+  margin-bottom: 3px;
+  outline: none;
+  padding: 10px 15px;
+  width: 100%;
+  height: 8rem;
+}
+
+.contact input[type="submit"] {
+  background: transparent;
+  display: inline-block;
+  box-sizing: inherit;
+  color: #fff;
+  float: right;
+  font-size: 12pt;
+  margin: 5px 0 0 0;
+  outline: 0;
+  padding: 10px 30px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+@media (max-width: 700px) {
+  .contact input[type="text"] {
+    width: 20rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact input[type="submit"] {
+    padding: 5px 15px;
+  }
+}
+
+.bigContactField {
+  animation: pop-in 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform-origin: center;
+  animation-delay: 3.5s;
+  opacity: 0;
+}
+@keyframes pop-in {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

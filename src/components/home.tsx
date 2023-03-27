@@ -2,7 +2,7 @@ import LogoGIF from "../img/Logo.gif";
 
 export default function Home() {
   return (
-    <div className="hero">
+    <div className="hero" id="home">
       <div className="heading">
         <div className="font-link">
           <p className="drop-in">

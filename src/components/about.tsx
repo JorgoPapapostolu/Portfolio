@@ -32,7 +32,7 @@ export default function About() {
           </p>
         </div>
         <div className="skills">
-        <div className="skills-row">
+        <div className="skills-row delayedFour fade-inFour">
           <div className='skillitem'>
             <img src={htmllogo} alt="html" />
             <div className='skill-name'>HTML</div>
@@ -47,7 +47,7 @@ export default function About() {
           </div>
         </div>
 
-            <div className="skills-row">
+            <div className="skills-row delayedFive fade-inFive">
               <div className='skillitem'>
                 <img src={javascript} alt="javascript" />
                 <div className='skill-name'>JAVASCRIPT</div>
@@ -70,7 +70,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="skills-row">
+            <div className="skills-row delayedSix fade-inSix">
               <div className='skillitem'>
                 <img src={sql} alt="sql" />
                 <div className='skill-name'>SQL</div>
