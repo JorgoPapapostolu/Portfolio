@@ -325,11 +325,11 @@ a {
   margin-top: 5rem;
   margin-bottom: 3rem;
   position: relative;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 900;
   color: white;
   font-family: "Montserrat";
-  border-bottom: 1px solid white;
+  border-bottom: 3px solid white;
   animation: profile 1.5s ease 250ms backwards;
 }
 
@@ -508,7 +508,45 @@ a {
   }
 }
 
+/* Projects */
+
+.projects {
+  background-color: #e2e2e2;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 3rem;
+  align-items: center;
+}
+
+.projects-heading {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  font-size: 3rem;
+  font-weight: 900;
+  color: black;
+  font-family: "Montserrat";
+  border-bottom: 3px solid black;
+  animation: contact-slide-reverse 2s ease 250ms backwards;
+}
+
+@keyframes contact-slide-reverse {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
 /* Contact */
+
+.triangle {
+  width: 100%;
+}
+
 
 .contact {
   display: flex;
@@ -530,11 +568,11 @@ a {
   margin-top: 5rem;
   margin-bottom: 2rem;
   position: relative;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 900;
   color: white;
   font-family: "Montserrat";
-  border-bottom: 1px solid white;
+  border-bottom: 3px solid white;
   animation: contact-slide 2s ease 250ms forwards;
 }
 

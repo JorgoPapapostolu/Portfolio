@@ -14,7 +14,7 @@ import typescript from "../img/techstack/typescript.png";
 export default function About() {
   return (
     <section className="about" id="about">
-      <h2 className="about-heading">About</h2>
+      <h2 className="about-heading">ABOUT</h2>
       <div className="about-content">
         <div className="profile">
           <img src={portrait} alt="portrait" className="portrait" />
