@@ -12,6 +12,7 @@ import sql from "../img/techstack/sql.png";
 import typescript from "../img/techstack/typescript.png";
 
 export default function About() {
+
   return (
     <section className="about" id="about">
       <div className="hidden">

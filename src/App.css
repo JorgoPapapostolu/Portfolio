@@ -612,7 +612,7 @@ a {
 
 @media (max-width: 700px) {
   .contact input[type="text"] {
-    width: 20rem;
+    width: 100%;
   }
 }
 
