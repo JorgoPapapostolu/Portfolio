@@ -41,7 +41,7 @@ export default function Contact(): JSX.Element {
           <path d="M0 0 L50 100 L100 0 Z" fill="#e2e2e2" stroke="e2e2e2"></path>
         </svg>
       </div>
-
+    <div className="hidden">
       <h2 className="contact-heading">CONTACT</h2>
       <div className="questionContact">
         Have a question or want to work together?
@@ -57,6 +57,7 @@ export default function Contact(): JSX.Element {
           </div>
         )}
       </form>
+      </div>
     </div>
   );
 }

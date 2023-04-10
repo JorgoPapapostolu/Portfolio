@@ -12,8 +12,10 @@ import sql from "../img/techstack/sql.png";
 import typescript from "../img/techstack/typescript.png";
 
 export default function About() {
+
   return (
     <section className="about" id="about">
+      <div className="hidden">
       <h2 className="about-heading">ABOUT</h2>
       <div className="about-content">
         <div className="profile">
@@ -32,58 +34,59 @@ export default function About() {
         </div>
         <div className="skills">
           <div className="skills-row delayedFour fade-inFour">
-            <div className="skillitem">
+            <div className="skillitem hidden">
               <img src={htmllogo} alt="html" />
               <div className="skill-name">HTML</div>
             </div>
-            <div className="skillitem">
+            <div className="skillitem hidden">
               <img src={css} alt="css" />
               <div className="skill-name">CSS</div>
             </div>
-            <div className="skillitem">
+            <div className="skillitem hidden">
               <img src={git} alt="git" />
               <div className="skill-name">GIT</div>
             </div>
           </div>
 
           <div className="skills-row delayedFive fade-inFive">
-            <div className="skillitem">
+            <div className="skillitem hidden">
               <img src={javascript} alt="javascript" />
               <div className="skill-name">JAVASCRIPT</div>
             </div>
-            <div className="skillitem">
+            <div className="skillitem hidden">
               <img src={typescript} alt="typescript" />
               <div className="skill-name">TYPESCRIPT</div>
             </div>
-            <div className="skillitem">
+            <div className="skillitem hidden">
               <img src={react} alt="react" />
               <div className="skill-name">REACT</div>
             </div>
-            <div className="skillitem">
+            <div className="skillitem hidden">
               <img src={node} alt="nodeJS" />
               <div className="skill-name">NODE.JS</div>
             </div>
-            <div className="skillitem">
+            <div className="skillitem hidden">
               <img src={express} alt="express" />
               <div className="skill-name">EXPRESS.JS</div>
             </div>
           </div>
 
           <div className="skills-row delayedSix fade-inSix">
-            <div className="skillitem">
+            <div className="skillitem hidden">
               <img src={sql} alt="sql" />
               <div className="skill-name">SQL</div>
             </div>
-            <div className="skillitem">
+            <div className="skillitem hidden">
               <img src={mongo} alt="mongo" />
               <div className="skill-name">MONGODB</div>
             </div>
-            <div className="skillitem">
+            <div className="skillitem hidden">
               <img src={postgresql} alt="postgresql" />
               <div className="skill-name">POSTGRESQL</div>
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );
