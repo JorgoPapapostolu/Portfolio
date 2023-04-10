@@ -42,18 +42,18 @@ export default function Contact(): JSX.Element {
         </svg>
       </div>
     <div className="hidden">
-      <h2 className="contact-heading">CONTACT</h2>
+      <h2 className="contact-heading">KONTAKT</h2>
       <div className="questionContact">
-        Have a question or want to work together?
+        Möchtest du dich mit mir in Verbindung setzen?
       </div>
       <form ref={form} onSubmit={sendEmail} className="bigContactField">
         <input placeholder="Name" type="text" name="name" required />
         <input placeholder="Email" type="text" name="email" required />
-        <textarea name="message" placeholder="Your Message"></textarea>
-        <input type="submit" id="submitContact" value="Send" />
+        <textarea name="message" placeholder="Deine Nachricht"></textarea>
+        <input type="submit" id="submitContact" value="Senden" />
         {isSent && (
           <div className="confirmation-message">
-            Your message has been sent. Thank you!
+            Deine Nachricht wurde versendet. Vielen Dank!
           </div>
         )}
       </form>

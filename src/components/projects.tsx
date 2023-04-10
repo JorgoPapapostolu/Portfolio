@@ -14,7 +14,7 @@ export default function Projects() {
   return (
     <div className="projects" id="projects">
       <div className="hidden">
-        <h2 className="projects-heading">PROJECTS</h2>
+        <h2 className="projects-heading">PROJEKTE</h2>
       </div>
     </div>
   );

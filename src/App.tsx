@@ -29,7 +29,7 @@ function App() {
       hiddenElements.forEach((el) => observer.unobserve(el));
     };
   }, []);
-  
+
   return (
     <div className="App">
     <Home />

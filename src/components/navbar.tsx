@@ -29,7 +29,7 @@ export default function Navbar() {
           onClick={() => handleScrollToRef(aboutRef)}
           ref={aboutRef}
         >
-          <a href="#about">About</a>
+          <a href="#about">Info</a>
         </li>
         <li
           className="navigation"
@@ -37,7 +37,7 @@ export default function Navbar() {
           onClick={() => handleScrollToRef(projectsRef)}
           ref={projectsRef}
         >
-          <a href="#projects">Projects</a>
+          <a href="#projects">Projekte</a>
         </li>
         <li
           className="navigation"
@@ -45,7 +45,7 @@ export default function Navbar() {
           onClick={() => handleScrollToRef(contactRef)}
           ref={contactRef}
         >
-          <a href="#contact">Contact</a>
+          <a href="#contact">Kontakt</a>
         </li>
       </ul>
     </nav>
