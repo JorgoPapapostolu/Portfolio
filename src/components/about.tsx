@@ -10,9 +10,9 @@ import postgresql from "../img/techstack/postgresql.png";
 import react from "../img/techstack/react.png";
 import sql from "../img/techstack/sql.png";
 import typescript from "../img/techstack/typescript.png";
+import PDF from "../img/Lebenslauf.pdf";
 
 export default function About() {
-
   return (
     <section className="about" id="about">
       <div className="hidden">
@@ -31,6 +31,10 @@ export default function About() {
               Durch diese Investition in meine berufliche Zukunft möchte ich
               meine Fähigkeiten erweitern und mich auf neue Möglichkeiten im
               Bereich der Softwareentwicklung vorbereiten.
+              <br />
+              <a href={PDF} download="Lebenslauf.pdf" className="download-button">
+              CV ANSEHEN
+            </a>
             </p>
           </div>
           <div className="skills">

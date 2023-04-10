@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+Lebenslauf.pdf
 
 # testing
 /coverage

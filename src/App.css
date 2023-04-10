@@ -35,7 +35,6 @@ body {
   transition-delay: 200ms;
 }
 
-
 /* Scrollbalken */
 ::-webkit-scrollbar {
   width: 10px;
@@ -400,6 +399,32 @@ a {
   .portrait {
     height: 260px;
     width: 390px;
+  }
+}
+
+.download-button {
+  display: inline-block;
+  background-color: #0062cc;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.download-button:hover {
+  background-color: #007bff;
+}
+
+@media (max-width: 700px) {
+  .download-button {
+    font-size: 12px;
+    
   }
 }
 
