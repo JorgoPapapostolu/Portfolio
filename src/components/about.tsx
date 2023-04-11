@@ -58,10 +58,10 @@ export default function About() {
                 <img src={javascript} alt="javascript" />
                 <div className="skill-name">JAVASCRIPT</div>
               </div>
-              <div className="skillitem hidden">
+              {/* <div className="skillitem hidden">
                 <img src={typescript} alt="typescript" />
                 <div className="skill-name">TYPESCRIPT</div>
-              </div>
+              </div> */}
               <div className="skillitem hidden">
                 <img src={react} alt="react" />
                 <div className="skill-name">REACT</div>
