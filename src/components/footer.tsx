@@ -17,7 +17,7 @@ export default function Footer() {
                         <img src={linkedin} alt="linkedinicon"/>
                     </div>
                 </a>
-                <a href="https://github.com/JorgosPapapostolu" className='githubLink' target='_blank' rel='noreferrer'>
+                <a href="https://github.com/JorgoPapapostolu" className='githubLink' target='_blank' rel='noreferrer'>
                     <div className='flex icon' id='icon-2'>
                         <img src={github} alt="githubicon"/>
                     </div>
