@@ -503,7 +503,7 @@ a {
 /* Projects */
 
 .projects {
-  background-color: #e2e2e2;
+  background-color: #1A202C;
   display: flex;
   flex-direction: column;
   margin-left: auto;
@@ -518,7 +518,7 @@ a {
   position: relative;
   font-size: 3rem;
   font-weight: 900;
-  color: black;
+  color: white;
   font-family: "Montserrat";
   text-decoration: underline;
   text-underline-offset: 0.2em;
@@ -526,6 +526,119 @@ a {
   letter-spacing: 1px;
   text-align: center;
 }
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1em; 
+}
+
+.slide {
+  position: relative;
+  display: inline-block;
+  width: 75%;
+}
+
+.mySlides {
+  width: 100%;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: #fff;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.prev-button {
+  left: -10px; 
+}
+
+.next-button {
+  right: -10px; 
+}
+
+.text-container {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: justify;
+  max-width: 700px; 
+  margin: 0 auto;
+}
+
+.bigTextDowntown {
+font-weight: bold;
+}
+
+.highlightDowntown {
+  color: #0cf25d;
+}
+
+.downtown-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  text-decoration: none;
+  background-color: #f5f5f5;
+  color: #333;
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.downtown-button:hover {
+  background-color: #e5e5e5;
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .projects-heading {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .slide {
+    width: 90%;
+  }
+
+  .prev-button {
+    left: -35px; 
+  }
+  
+  .next-button {
+    right: -2px; 
+  }
+
+
+  .text-container {
+    max-width: 80%;
+  }
+
+  .downtown-button {
+    font-size: 14px;
+  }
+}
+
+
 
 /* Contact */
 
@@ -657,7 +770,7 @@ a {
 /* Footer */
 
 .footer {
-  background-color: #1e242c;
+  background-color: #1A202C;
   padding: 70px 0 50px 0;
   position: relative;
   display: block;

@@ -38,7 +38,7 @@ export default function Contact(): JSX.Element {
           xmlns="http://www.w3.org/2000/svg"
           className="svgcolor-light"
         >
-          <path d="M0 0 L50 100 L100 0 Z" fill="#e2e2e2" stroke="e2e2e2"></path>
+          <path d="M0 0 L50 100 L100 0 Z" fill="#1A202C" stroke="e2e2e2"></path>
         </svg>
       </div>
     <div className="hidden">
