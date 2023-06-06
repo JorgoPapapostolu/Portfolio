@@ -510,6 +510,7 @@ a {
   margin-right: auto;
   padding-bottom: 3rem;
   align-items: center;
+  overflow-x: hidden;
 }
 
 .projects-heading {
