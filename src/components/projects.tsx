@@ -56,7 +56,7 @@ export default function Projects() {
               Menschen mit Trisomie 21 möglich macht.
             </p>
             <p>
-              Unser Projekt wird in Zukunft vom Redaktionsteam Ohrenkuss genutzt
+              Unser Projekt wird in Zukunft von einem Verein genutzt
               werden. In der Applikation soll es den rund fünfzehn Mitgliedern
               aus Bonn und den über vierzig entfernt lebenden
               Korrespondenten:innen möglich gemacht werden, sich in einem
